@@ -1,12 +1,11 @@
 //set inital count
 let count = 0;
 
-//select value
+//set variables
 const value = document.querySelector('#value');
 const btns = document.querySelectorAll('.btn');
 
 btns.forEach(function (btn) {
-  //console.log(btn);
   btn.addEventListener('click', function (e) {
     const styles = e.currentTarget.classList;
     if (styles.contains('decrease')) {
@@ -17,14 +16,15 @@ btns.forEach(function (btn) {
       count = 0;
     }
     if (count > 0) {
-      value.style.color = 'green';
+      value.style.Color = 'green';
     }
     if (count === 0) {
-      value.style.color = 'grey';
+      value.style.Color = 'grey';
     }
     if (count < 0) {
-      value.style.color = 'red';
+      value.style.Color = 'red';
     }
+
     value.textContent = count;
   });
 });
